@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Thêm</title>
+</head>
+<body class="container">
+<h2>Edit Thong Tin</h2>
+
+
+<form method="post" action="/listimage/edit" , enctype="application/x-www-form-urlencoded">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Tên ảnh</label>
+        <input  class="form-control"  aria-describedby="emailHelp" placeholder="Tên ảnh" name="nameAnh">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Nội dung ảnh</label>
+        <input  class="form-control" placeholder="Nội dung ảnh" name="content">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Link ảnh</label>
+        <input class="form-control" placeholder="Link ảnh" name="link">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">edit</button>
+</form>
+<button type="submit" class="btn btn-primary"><a class="btn btn-success delete" href="./listimage" >Quay về</a></button>
+
+<h2>Thông tin</h2>
+<div class="col-lg-4 col-md-6 grid-item mb-4">
+    <img class="img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src= <%=data.linkAnh%> alt="" width="50%" height="50%"></img>
+    <h2 class="h4"><%=data.noiDung%></h2>
+    <p class="small text-muted font-italic"><%=data.tenAnh%></p>
+
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
